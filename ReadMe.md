@@ -9,21 +9,29 @@ The following course description is provided by the university:
 
 ## Algorithms Included
 
-Basic Graph Search Methods
+#### Basic Graph Search Methods
 - Blind Search
-    - Breadth-First Search
-    - Depth-First Search
+    - **Breadth-First Search**
+    - **Depth-First Search**
 - Informed Search
     - A*
 
-Heuristic Methods
+#### Heuristic Methods
 - Trajectory Methods
-    - Simulated Annealing
+    - **Simulated Annealing**
 - Population-based Methods
     - Swarm Intelligence
-        - Particle Swarm Optimization
-        - Ant Colony Optimization
+        - **Particle Swarm Optimization**
+        - **Ant Colony Optimization**
     - Evolutionary Computing
-        - Genetic Algorithms
-        - Evolutionary Programming (using [DEAP](https://github.com/deap/deap) framework)
+        - **Genetic Algorithms**
+        - **Evolutionary Programming** (using [DEAP](https://github.com/deap/deap) framework)
 
+## Implementation Details
+
+- [A*](A_star.py) and [BFS and DFS](BFS_DFS.py) implementations are for a navigating a 2D maze.
+- [Simulated Annealing](SA_TRP.py) was used to solve the Vehicle Routing Problem (VRP), which is a generalized version of the common Travelling Salesman Problem (TSP). Data for the VRP was taken from instance A-n39-k6.vrp found at [NEO](http://neo.lcc.uma.es/vrp/vrp-instances/capacitated-vrp-instances/).
+- An object-oriented implementation of [Particle Swarm Optimization](PSO.py) was used to find the global minima of the 6-hump camelback function. Variations of the algorithm include Simple PSO, Inertia Weight, Constriction Coefficient, and Guaranteed Convergence (GCPSO).
+- Two versions of Ant Colony Optimization (Ant Colony System (ACS) with [offline](ACS_offline_TSP.py) and [online-delayed](ACS_online_delayed_TSP.py) pheromone update methods) were used to solve the Travelling Salesman Problem. The target problem is the Bays29, whose data is stored in [cities.csv](cities.csv).
+- The [Genetic Algorithm](GA.py) was used to optimize the Integral Squared Error (ISE) of the step response calculated for a sample PID Controller.
+- The DEAP framework was used to apply [Genetic Programming](GP_using_deap.py) to create a program that simulates a multiplexer. 
